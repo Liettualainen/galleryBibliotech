@@ -4,11 +4,13 @@ const currentUl = document.getElementsByClassName("gallery")[0];
 
 const CollectionImages = galleryItems.map((galleryItem) =>
   galleryItem =`
-        <li class="gallery__item">
+        <li class="gallery__item" >
         <a class="gallery__link" href=${galleryItem.original}>
             <img
             class="gallery__image"
+            class="lazyload blur-up"
             src=${galleryItem.preview} 
+            data-src=${galleryItem.preview} 
             data-source=${galleryItem.original}
             alt=${galleryItem.description} />
         </a>
